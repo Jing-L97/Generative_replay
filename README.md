@@ -4,12 +4,8 @@
 
 ```bash
 pip install -r requirements.txt
-pip install faiss-cpu hydra-core   # not pinned in requirements.txt yet
+ 
 ```
-
-On macOS, `faiss-cpu` and PyTorch ship separate OpenMP runtimes. The smoke-test
-script sets `KMP_DUPLICATE_LIB_OK=TRUE` and `OMP_NUM_THREADS=1` to keep both
-loadable in the same process.
 
 ## Layout
 
@@ -66,9 +62,9 @@ for c in w wo w+r wo+r; do
 done
 ```
 
-## Running the manuscript experiments
+## Running the experiments
 
-The smoke configs are self-contained. For the real experiments, compose Hydra
+For the real experiments, compose Hydra
 config groups under `experiments/configs/`:
 
 ```bash
