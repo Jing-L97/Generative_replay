@@ -1,0 +1,7 @@
+dir: results/datastore/full
+keytype: last_ffn_input
+batch_size: 8
+tiny_mode: false
+ncentroids: 4096
+code_size: 64
+probe: 32

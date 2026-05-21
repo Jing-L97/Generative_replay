@@ -1,0 +1,6 @@
+granularity: sequence
+tau: 10
+k: 1
+lmbda: 0.25
+tau_softmax: 1.0
+mode: full

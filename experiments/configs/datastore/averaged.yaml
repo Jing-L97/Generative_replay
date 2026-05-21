@@ -1,0 +1,8 @@
+variant: averaged
+dir: results/datastore/averaged
+window: 5
+tiny_mode: false
+full_dir: ???
+full_model_type: gpt2
+full_dstore_size: ???
+full_dimension: ???

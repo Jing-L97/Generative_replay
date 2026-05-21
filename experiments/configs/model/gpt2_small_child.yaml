@@ -1,0 +1,4 @@
+# Pre-trained checkpoint location for the child-realistic GPT-2 Small.
+# Override `name_or_path` to point at the local 50M-word BabyLM checkpoint.
+name_or_path: ???
+model_type: gpt2

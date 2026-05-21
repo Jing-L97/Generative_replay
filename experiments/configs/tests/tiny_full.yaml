@@ -1,0 +1,31 @@
+# Smoke test: full contextualized datastore over tiny_corpus, k=1, τ=3, sequence-level.
+model:
+  name_or_path: sshleifer/tiny-gpt2
+  model_type: gpt2
+
+corpus:
+  path: experiments/tests/fixtures/train/tiny_corpus.txt
+
+retrieval:
+  mode: full
+  granularity: sequence
+  tau: 3
+  k: 1
+  lmbda: 0.25
+  tau_softmax: 1.0
+
+datastore:
+  dir: results/smoke/full
+  keytype: last_ffn_input
+  batch_size: 4
+  tiny_mode: true   # IndexFlatL2 fallback — corpus too small for IVFPQ
+
+eval:
+  freq_path: experiments/tests/fixtures/freq/tiny_word_freq.json
+  pairs:
+    SV: experiments/tests/fixtures/eval/sv_pairs.jsonl
+    Wh: experiments/tests/fixtures/eval/wh_pairs.jsonl
+    RC: experiments/tests/fixtures/eval/rc_pairs.jsonl
+
+output:
+  path: results/smoke/full/results.json

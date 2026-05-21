@@ -1,0 +1,6 @@
+variant: fasttext
+dir: results/datastore/fasttext
+embeddings:
+  - ???   # path to fastText text file
+tiny_mode: true
+model_type: fasttext

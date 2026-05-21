@@ -1,0 +1,6 @@
+variant: glove
+dir: results/datastore/glove
+embeddings:
+  - ???   # path to GloVe text file
+tiny_mode: true
+model_type: glove
